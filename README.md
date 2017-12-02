@@ -1,5 +1,5 @@
 # calendar-calculator
-a plugin for calendar calculator
+A plugin for calendar calculator
 
 
 ## Install
