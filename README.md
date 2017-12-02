@@ -1,5 +1,7 @@
-# calendar-calculator
-A plugin for calendar calculator
+# calendar-calculator 
+[![](https://img.shields.io/badge/language-JavaScript-brightgreen.svg)](https://travis-ci.org/ChanceYu/calendar-calculator) 
+[![Build Status](https://travis-ci.org/ChanceYu/calendar-calculator.svg?branch=master)](https://travis-ci.org/ChanceYu/calendar-calculator)
+A plugin for calendar calculator 
 
 
 ## Install
