@@ -1,0 +1,47 @@
+{
+  "name": "calendar-calculator",
+  "version": "1.0.0",
+  "description": "a plugin for calendar months",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --watch --config webpack.config --colors",
+    "test": "mocha test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ChanceYu/calendar-calculator.git"
+  },
+  "keywords": [
+    "moment",
+    "calendar",
+    "month",
+    "date"
+  ],
+  "author": "ChanceYu",
+  "license": "MIT",
+  "dependencies": {
+    "object-assign": "^4.1.1",
+    "moment": "^2.15.0",
+    "webpack": "^2.7.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "babelify": "^7.3.0",
+    "uglify-js": "^3.1.3",
+    "webpack": "^3.6.0",
+    "webpack-umd-external": "^1.0.2",
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "bugs": {
+    "url": "https://github.com/ChanceYu/calendar-calculator/issues"
+  },
+  "homepage": "https://github.com/ChanceYu/calendar-calculator#readme"
+}
