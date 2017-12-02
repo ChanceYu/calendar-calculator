@@ -1,10 +1,12 @@
 {
   "name": "calendar-calculator",
-  "version": "1.0.1",
-  "description": "a plugin for calendar months",
+  "version": "1.0.6",
+  "description": "a plugin for calendar calculator",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --watch --config webpack.config --colors",
+    "build": "npm run build-pro && npm run build-dev",
+    "build-pro": "NODE_ENV=production webpack --config webpack.config --colors",
+    "build-dev": "NODE_ENV=development webpack --watch --config webpack.config --colors",
     "test": "mocha test/*.js"
   },
   "repository": {

@@ -3,24 +3,24 @@
 [![](https://img.shields.io/badge/language-JavaScript-brightgreen.svg)](https://travis-ci.org/ChanceYu/calendar-calculator)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php) 
 
-A plugin for calendar calculator , [中文](./README-zh.md)
+一个日历月份计算器插件，[English](./README.md)
 
 
-## Install
+## 安装
 
 ```bash
 npm install calendar-calculator
 ```
 
 
-## Features
+## 特点
 
-- Highly customizable
-- No dependence on UI, You can design by yourself
-- Support browser、nodejs、miniProgram（小程序）
+- 高度可定制
+- 不依赖任何UI, 你可以自己设计
+- 支持浏览器、Node端、小程序
 
 
-## Usage
+## 使用
 
 ```javascript
 var oCalendar = new CalendarCalculator({
@@ -34,20 +34,20 @@ console.log(months);
 ```
 
 
-## Parameter
+## 参数
 
-- `startDate` - the start date formatted like `YYYY-MM-DD`
-- `endDate` -  the end date formatted like `YYYY-MM-DD`
-
-
-## Method
-
-- `getTotal` - get the total months from `startDate` to `endDate`
+- `startDate` - 开始日期，形如 `YYYY-MM-DD`
+- `endDate` -  结束日期，形如 `YYYY-MM-DD`
 
 
-## Result
+## 方法
 
-After use `getTotal` method will return the result structure below
+- `getTotal` - 获取开始日期到结束日期之间的所有月份
+
+
+## 结果
+
+使用 `getTotal` 方法将会返回以下数据结构
 
 ```bash
 [
@@ -70,22 +70,22 @@ After use `getTotal` method will return the result structure below
 ```
 
 
-### date properties
-- `date` - total date formatted `YYYY-MM-DD`
-- `day` - date formatted `DD`
-- `weekday` - weekday from `0` to `6`
-- `week` - Chinese weekday `日一二三四五六`
-- `isPrevMonth` - if it is previous month date, will be `true`
-- `isNextMonth` - if it is next month date, will be `true`
-- `disabled` - if it is `isPrevMonth`、`isNextMonth` or current month disabled date(not between `startDate` to `endDate`), will be `true`
+### 每条数据的属性（也就是每一天的数据）
+- `date` - 当天完整的日期 ，格式 `YYYY-MM-DD`
+- `day` - 当天的日期 ，格式 `DD`
+- `weekday` - 数字从 `0` 到 `6` 的每周值
+- `week` - 中文的每周值，`日一二三四五六`
+- `isPrevMonth` - 如果是上个月份的日期, 就是 `true`
+- `isNextMonth` - 如果是下个月份的日期, 就是 `true`
+- `disabled` - 如果是上个月份的日期、下个月份的日期，或者当月不可用的日期(不在 `startDate`开始日期和`endDate`结束日期范围之内),  就是 `true`
 
 
-## Examples
+## 案例
 
 - [react-calendar-picker](https://github.com/ChanceYu/react-calendar-picker)
 - [小程序 weapp.CalendarPicker](https://github.com/ChanceYu/weapp#weappcalendarpicker)
 
 
-## License
+## 协议
 
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php) 
