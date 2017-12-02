@@ -38,6 +38,10 @@ let config = {
 };
 
 if(env === 'production'){
+  config.externals = webpackUMDExternal({
+    'moment': 'moment'
+  });
+}else if(env === 'development'){
   config.plugins.push(new webpack.optimize.UglifyJsPlugin({
     compress: {
       warnings: false
@@ -54,10 +58,6 @@ if(env === 'production'){
 */`
     }
   }));
-  config.externals = webpackUMDExternal({
-    'moment': 'moment'
-  });
-}else if(env === 'development'){
   config.output.filename = 'calendar-calculator.all.js';
   config.devtool = 'source-map';
 }

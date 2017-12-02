@@ -1,8 +1,587 @@
-/**
-* calendar-calculator.js
-* Version: 1.0.6
-* Address: (https://github.com/ChanceYu/calendar-calculator)
-* Author: ChanceYu
-* Licensed under the MIT license
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("moment"));
+	else if(typeof define === 'function' && define.amd)
+		define("CalendarCalculator", ["moment"], factory);
+	else if(typeof exports === 'object')
+		exports["CalendarCalculator"] = factory(require("moment"));
+	else
+		root["CalendarCalculator"] = factory(root["moment"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+    toDouble: function toDouble(n) {
+        return n < 10 ? '0' + n : n + '';
+    }
+};
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
 */
-!function(t,e){"object"==typeof exports&&"object"==typeof module?module.exports=e(require("moment")):"function"==typeof define&&define.amd?define("CalendarCalculator",["moment"],e):"object"==typeof exports?exports.CalendarCalculator=e(require("moment")):t.CalendarCalculator=e(t.moment)}(this,function(t){return function(t){function e(n){if(a[n])return a[n].exports;var o=a[n]={i:n,l:!1,exports:{}};return t[n].call(o.exports,o,o.exports,e),o.l=!0,o.exports}var a={};return e.m=t,e.c=a,e.i=function(t){return t},e.d=function(t,a,n){e.o(t,a)||Object.defineProperty(t,a,{configurable:!1,enumerable:!0,get:n})},e.n=function(t){var a=t&&t.__esModule?function(){return t.default}:function(){return t};return e.d(a,"a",a),a},e.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},e.p="",e(e.s=4)}([function(t,e,a){"use strict";t.exports={toDouble:function(t){return t<10?"0"+t:t+""}}},function(t,e,a){"use strict";function n(t){if(null===t||void 0===t)throw new TypeError("Object.assign cannot be called with null or undefined");return Object(t)}var o=Object.getOwnPropertySymbols,i=Object.prototype.hasOwnProperty,r=Object.prototype.propertyIsEnumerable;t.exports=function(){try{if(!Object.assign)return!1;var t=new String("abc");if(t[5]="de","5"===Object.getOwnPropertyNames(t)[0])return!1;for(var e={},a=0;a<10;a++)e["_"+String.fromCharCode(a)]=a;if("0123456789"!==Object.getOwnPropertyNames(e).map(function(t){return e[t]}).join(""))return!1;var n={};return"abcdefghijklmnopqrst".split("").forEach(function(t){n[t]=t}),"abcdefghijklmnopqrst"===Object.keys(Object.assign({},n)).join("")}catch(t){return!1}}()?Object.assign:function(t,e){for(var a,s,u=n(t),d=1;d<arguments.length;d++){a=Object(arguments[d]);for(var f in a)i.call(a,f)&&(u[f]=a[f]);if(o){s=o(a);for(var l=0;l<s.length;l++)r.call(a,s[l])&&(u[s[l]]=a[s[l]])}}return u}},function(e,a){e.exports=t},function(t,e,a){"use strict";function n(t){return t&&t.__esModule?t:{default:t}}function o(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}var i=function(){function t(t,e){for(var a=0;a<e.length;a++){var n=e[a];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}return function(e,a,n){return a&&t(e.prototype,a),n&&t(e,n),e}}(),r=a(2),s=n(r),u=a(1),d=n(u),f=a(0),l=function(){function t(e){o(this,t),this.options=(0,d.default)({},t.defaultOptions,e),this.init()}return i(t,[{key:"init",value:function(){var t=(0,s.default)(this.options.startDate),e=(0,s.default)(this.options.endDate),a=t.clone().startOf("month"),n=t.clone().endOf("month"),o=a.clone().startOf("week"),i=o.clone().endOf("month"),r=n.clone().endOf("week");r.clone().startOf("month");a.isSame(o)||(this.existPrevMonthDays=!0),a.isSame(t)||(this.existStartDisableDays=!0),n.isSame(e)||(this.existEndDisableDays=!0),n.isSame(r)||(this.existNextMonthDays=!0),this.startDate=t.date(),this.endDate=e.date(),this.firstDate=a.date(),this.lastDate=n.date(),this.prevMonthFirstDate=o.date(),this.prevMonthLastDate=i.date(),this.nextMonthLastDate=r.date(),this.YYYY=t.format("YYYY"),this.MM=t.format("MM"),this.prevMM=o.format("MM"),this.nextMM=r.format("MM"),this.todayDate=(0,s.default)().format("YYYY-MM-DD")}},{key:"getTotalDateCell",value:function(){var t=[],e="日一二三四五六".split(""),a=0,n=0;if(this.existPrevMonthDays)for(n=this.prevMonthFirstDate;n<=this.prevMonthLastDate;n++){var o=(0,f.toDouble)(n),i=this.YYYY+"-"+this.prevMM+"-"+o,r=e[a],s={date:i,weekday:a,week:r,day:o,isPrevMonth:!0,disabled:!0};i===this.todayDate&&(this.existToday=!0,s.isToday=!0),t.push(s),a++,7===a&&(a=0)}if(this.existStartDisableDays)for(n=1;n<this.startDate;n++){var u=(0,f.toDouble)(n),d=this.YYYY+"-"+this.MM+"-"+u,l=e[a],h={date:d,weekday:a,week:l,day:u,disabled:!0};d===this.todayDate&&(this.existToday=!0,h.isToday=!0),t.push(h),a++,7===a&&(a=0)}for(n=this.startDate;n<=this.endDate;n++){var c=(0,f.toDouble)(n),y=this.YYYY+"-"+this.MM+"-"+c,D=e[a],p={date:y,weekday:a,week:D,day:c,enabled:!0};y===this.todayDate&&(this.existToday=!0,p.isToday=!0),t.push(p),a++,7===a&&(a=0)}if(this.existEndDisableDays)for(n=this.endDate+1;n<=this.lastDate;n++){var m=(0,f.toDouble)(n),b=this.YYYY+"-"+this.MM+"-"+m,Y=e[a],M={date:b,weekday:a,week:Y,day:m,disabled:!0};b===this.todayDate&&(this.existToday=!0,M.isToday=!0),t.push(M),a++,7===a&&(a=0)}if(this.existNextMonthDays)for(n=1;n<=this.nextMonthLastDate;n++){var v=(0,f.toDouble)(n),x=this.YYYY+"-"+this.nextMM+"-"+v,O=e[a],w={date:x,weekday:a,week:O,day:v,isNextMonth:!0,disabled:!0};x===this.todayDate&&(this.existToday=!0,w.isToday=!0),t.push(w),a++,7===a&&(a=0)}return t}}]),t}();l.defaultOptions={startDate:"",endDate:""},t.exports=l},function(t,e,a){"use strict";function n(t){return t&&t.__esModule?t:{default:t}}function o(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}var i=function(){function t(t,e){for(var a=0;a<e.length;a++){var n=e[a];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}return function(e,a,n){return a&&t(e.prototype,a),n&&t(e,n),e}}(),r=a(2),s=n(r),u=a(1),d=n(u),f=(a(0),a(3)),l=n(f),h=function(){function t(e){o(this,t),this.options=(0,d.default)({},t.defaultOptions,e)}return i(t,[{key:"isInvalidDate",value:function(){var t=this.options.startDate,e=this.options.endDate,a=function(t){return t=t.split(/\D/),3===t.length};return a(t)&&a(e)&&(0,s.default)(t).isValid()&&(0,s.default)(e).isValid()}},{key:"getTotal",value:function(){var t=this.options.startDate,e=this.options.endDate,a=this.options.format,n=(0,s.default)(t),o=(0,s.default)(e),i=[],r=n.clone().startOf("month").format(a),u=o.clone().startOf("month").format(a),d=void 0;if(r===u)d=new l.default({startDate:t,endDate:e}),i.push({title:(0,s.default)(t).format("YYYY-MM"),dates:d.getTotalDateCell()}),d.existToday&&(this.todayDate={},this.todayDate.date=d.todayDate,this.todayDate.monthIndex=i.length-1);else{for(var f=t,h=(0,s.default)(t).endOf("month").format(a);f!==u;){d=new l.default({startDate:f,endDate:h}),i.push({title:(0,s.default)(f).format("YYYY-MM"),dates:d.getTotalDateCell()}),d.existToday&&(this.todayDate={},this.todayDate.date=d.todayDate,this.todayDate.monthIndex=i.length-1);var c=(0,s.default)(h).subtract(-1,"days");f=c.startOf("month").format(a),h=c.endOf("month").format(a)}d=new l.default({startDate:u,endDate:e}),i.push({title:(0,s.default)(u).format("YYYY-MM"),dates:d.getTotalDateCell()}),d.existToday&&(this.todayDate={},this.todayDate.date=d.todayDate,this.todayDate.monthIndex=i.length-1)}return i}},{key:"getToday",value:function(){return this.todayDate}}]),t}();h.defaultOptions={startDate:"",endDate:"",format:"YYYY-MM-DD"},t.exports=h}])});
+
+
+/* eslint-disable no-unused-vars */
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+function toObject(val) {
+	if (val === null || val === undefined) {
+		throw new TypeError('Object.assign cannot be called with null or undefined');
+	}
+
+	return Object(val);
+}
+
+function shouldUseNative() {
+	try {
+		if (!Object.assign) {
+			return false;
+		}
+
+		// Detect buggy property enumeration order in older V8 versions.
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		test1[5] = 'de';
+		if (Object.getOwnPropertyNames(test1)[0] === '5') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test2 = {};
+		for (var i = 0; i < 10; i++) {
+			test2['_' + String.fromCharCode(i)] = i;
+		}
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			return test2[n];
+		});
+		if (order2.join('') !== '0123456789') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test3 = {};
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+			test3[letter] = letter;
+		});
+		if (Object.keys(Object.assign({}, test3)).join('') !==
+				'abcdefghijklmnopqrst') {
+			return false;
+		}
+
+		return true;
+	} catch (err) {
+		// We don't expect any of the above to throw, but better to be safe.
+		return false;
+	}
+}
+
+module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+	var from;
+	var to = toObject(target);
+	var symbols;
+
+	for (var s = 1; s < arguments.length; s++) {
+		from = Object(arguments[s]);
+
+		for (var key in from) {
+			if (hasOwnProperty.call(from, key)) {
+				to[key] = from[key];
+			}
+		}
+
+		if (getOwnPropertySymbols) {
+			symbols = getOwnPropertySymbols(from);
+			for (var i = 0; i < symbols.length; i++) {
+				if (propIsEnumerable.call(from, symbols[i])) {
+					to[symbols[i]] = from[symbols[i]];
+				}
+			}
+		}
+	}
+
+	return to;
+};
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _moment = __webpack_require__(2);
+
+var _moment2 = _interopRequireDefault(_moment);
+
+var _objectAssign = __webpack_require__(1);
+
+var _objectAssign2 = _interopRequireDefault(_objectAssign);
+
+var _tool = __webpack_require__(0);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SingleMonth = function () {
+  function SingleMonth(options) {
+    _classCallCheck(this, SingleMonth);
+
+    this.options = (0, _objectAssign2.default)({}, SingleMonth.defaultOptions, options);
+
+    this.init();
+  }
+
+  _createClass(SingleMonth, [{
+    key: 'init',
+    value: function init() {
+      var oStartDate = (0, _moment2.default)(this.options.startDate);
+      var oEndDate = (0, _moment2.default)(this.options.endDate);
+
+      var oFirstDate = oStartDate.clone().startOf('month');
+      var oLastDate = oStartDate.clone().endOf('month');
+
+      var oFirstWeekDate = oFirstDate.clone().startOf('week');
+      var oPrevMonthLastDate = oFirstWeekDate.clone().endOf('month');
+
+      var oLastWeekDate = oLastDate.clone().endOf('week');
+      var oNextMonthFirstDate = oLastWeekDate.clone().startOf('month');
+
+      if (!oFirstDate.isSame(oFirstWeekDate)) {
+        this.existPrevMonthDays = true;
+      }
+
+      if (!oFirstDate.isSame(oStartDate)) {
+        this.existStartDisableDays = true;
+      }
+
+      if (!oLastDate.isSame(oEndDate)) {
+        this.existEndDisableDays = true;
+      }
+
+      if (!oLastDate.isSame(oLastWeekDate)) {
+        this.existNextMonthDays = true;
+      }
+
+      this.startDate = oStartDate.date();
+      this.endDate = oEndDate.date();
+
+      this.firstDate = oFirstDate.date();
+      this.lastDate = oLastDate.date();
+
+      this.prevMonthFirstDate = oFirstWeekDate.date();
+      this.prevMonthLastDate = oPrevMonthLastDate.date();
+
+      this.nextMonthLastDate = oLastWeekDate.date();
+
+      this.YYYY = oStartDate.format('YYYY');
+      this.MM = oStartDate.format('MM');
+      this.prevMM = oFirstWeekDate.format('MM');
+      this.nextMM = oLastWeekDate.format('MM');
+      this.todayDate = (0, _moment2.default)().format('YYYY-MM-DD');
+    }
+  }, {
+    key: 'getTotalDateCell',
+    value: function getTotalDateCell() {
+      var cells = [];
+
+      var weekTitle = '日一二三四五六'.split('');
+      var weekIndex = 0;
+      var i = 0;
+
+      // prev month disabled days
+      if (this.existPrevMonthDays) {
+        for (i = this.prevMonthFirstDate; i <= this.prevMonthLastDate; i++) {
+          var day = (0, _tool.toDouble)(i);
+          var date = this.YYYY + '-' + this.prevMM + '-' + day;
+          var week = weekTitle[weekIndex];
+          var item = {
+            date: date,
+            weekday: weekIndex,
+            week: week,
+            day: day,
+            isPrevMonth: true,
+            disabled: true
+          };
+
+          if (date === this.todayDate) {
+            this.existToday = true;
+            item.isToday = true;
+          }
+
+          cells.push(item);
+
+          weekIndex++;
+
+          if (weekIndex === 7) weekIndex = 0;
+        }
+      }
+
+      // current month disabled days `start`
+      if (this.existStartDisableDays) {
+        for (i = 1; i < this.startDate; i++) {
+          var _day = (0, _tool.toDouble)(i);
+          var _date = this.YYYY + '-' + this.MM + '-' + _day;
+          var _week = weekTitle[weekIndex];
+          var _item = {
+            date: _date,
+            weekday: weekIndex,
+            week: _week,
+            day: _day,
+            disabled: true
+          };
+
+          if (_date === this.todayDate) {
+            this.existToday = true;
+            _item.isToday = true;
+          }
+
+          cells.push(_item);
+
+          weekIndex++;
+
+          if (weekIndex === 7) weekIndex = 0;
+        }
+      }
+
+      // current month enabled days
+      for (i = this.startDate; i <= this.endDate; i++) {
+        var _day2 = (0, _tool.toDouble)(i);
+        var _date2 = this.YYYY + '-' + this.MM + '-' + _day2;
+        var _week2 = weekTitle[weekIndex];
+        var _item2 = {
+          date: _date2,
+          weekday: weekIndex,
+          week: _week2,
+          day: _day2,
+          enabled: true
+        };
+
+        if (_date2 === this.todayDate) {
+          this.existToday = true;
+          _item2.isToday = true;
+        }
+
+        cells.push(_item2);
+
+        weekIndex++;
+
+        if (weekIndex === 7) weekIndex = 0;
+      }
+
+      // current month disabled days `end`
+      if (this.existEndDisableDays) {
+        for (i = this.endDate + 1; i <= this.lastDate; i++) {
+          var _day3 = (0, _tool.toDouble)(i);
+          var _date3 = this.YYYY + '-' + this.MM + '-' + _day3;
+          var _week3 = weekTitle[weekIndex];
+          var _item3 = {
+            date: _date3,
+            weekday: weekIndex,
+            week: _week3,
+            day: _day3,
+            disabled: true
+          };
+
+          if (_date3 === this.todayDate) {
+            this.existToday = true;
+            _item3.isToday = true;
+          }
+
+          cells.push(_item3);
+
+          weekIndex++;
+
+          if (weekIndex === 7) weekIndex = 0;
+        }
+      }
+
+      // next month disabled days
+      if (this.existNextMonthDays) {
+        for (i = 1; i <= this.nextMonthLastDate; i++) {
+          var _day4 = (0, _tool.toDouble)(i);
+          var _date4 = this.YYYY + '-' + this.nextMM + '-' + _day4;
+          var _week4 = weekTitle[weekIndex];
+          var _item4 = {
+            date: _date4,
+            weekday: weekIndex,
+            week: _week4,
+            day: _day4,
+            isNextMonth: true,
+            disabled: true
+          };
+
+          if (_date4 === this.todayDate) {
+            this.existToday = true;
+            _item4.isToday = true;
+          }
+
+          cells.push(_item4);
+
+          weekIndex++;
+
+          if (weekIndex === 7) weekIndex = 0;
+        }
+      }
+
+      return cells;
+    }
+  }]);
+
+  return SingleMonth;
+}();
+
+SingleMonth.defaultOptions = {
+  startDate: '',
+  endDate: ''
+};
+
+
+module.exports = SingleMonth;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     * calendar-calculator.js
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     * Address: (https://github.com/ChanceYu/calendar-calculator)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     * Author: ChanceYu
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     * Licensed under the MIT license
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     */
+
+
+var _moment = __webpack_require__(2);
+
+var _moment2 = _interopRequireDefault(_moment);
+
+var _objectAssign = __webpack_require__(1);
+
+var _objectAssign2 = _interopRequireDefault(_objectAssign);
+
+var _tool = __webpack_require__(0);
+
+var _SingleMonth = __webpack_require__(3);
+
+var _SingleMonth2 = _interopRequireDefault(_SingleMonth);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var CalendarCalculator = function () {
+  function CalendarCalculator(options) {
+    _classCallCheck(this, CalendarCalculator);
+
+    this.options = (0, _objectAssign2.default)({}, CalendarCalculator.defaultOptions, options);
+  }
+
+  _createClass(CalendarCalculator, [{
+    key: 'isInvalidDate',
+    value: function isInvalidDate() {
+      var startDate = this.options.startDate;
+      var endDate = this.options.endDate;
+
+      var valid = function valid(date) {
+        date = date.split(/\D/);
+
+        return date.length === 3;
+      };
+
+      return valid(startDate) && valid(endDate) && (0, _moment2.default)(startDate).isValid() && (0, _moment2.default)(endDate).isValid();
+    }
+  }, {
+    key: 'getTotal',
+    value: function getTotal() {
+      var startDate = this.options.startDate;
+      var endDate = this.options.endDate;
+      var format = this.options.format;
+
+      var oStartDate = (0, _moment2.default)(startDate);
+      var oEndDate = (0, _moment2.default)(endDate);
+
+      var monthData = [];
+      var startEdgeDateOfStartDate = oStartDate.clone().startOf('month').format(format);
+      var startEdgeDateOfEndDate = oEndDate.clone().startOf('month').format(format);
+
+      var oMonth = void 0;
+
+      if (startEdgeDateOfStartDate === startEdgeDateOfEndDate) {
+        oMonth = new _SingleMonth2.default({
+          startDate: startDate,
+          endDate: endDate
+        });
+
+        monthData.push({
+          title: (0, _moment2.default)(startDate).format('YYYY-MM'),
+          dates: oMonth.getTotalDateCell()
+        });
+
+        if (oMonth.existToday) {
+          this.todayDate = {};
+          this.todayDate.date = oMonth.todayDate;
+          this.todayDate.monthIndex = monthData.length - 1;
+        }
+      } else {
+        var _startDate = startDate;
+        var _endDate = (0, _moment2.default)(startDate).endOf('month').format(format);
+
+        while (_startDate !== startEdgeDateOfEndDate) {
+          oMonth = new _SingleMonth2.default({
+            startDate: _startDate,
+            endDate: _endDate
+          });
+
+          monthData.push({
+            title: (0, _moment2.default)(_startDate).format('YYYY-MM'),
+            dates: oMonth.getTotalDateCell()
+          });
+
+          if (oMonth.existToday) {
+            this.todayDate = {};
+            this.todayDate.date = oMonth.todayDate;
+            this.todayDate.monthIndex = monthData.length - 1;
+          }
+
+          var nextMonth = (0, _moment2.default)(_endDate).subtract(-1, "days");
+
+          _startDate = nextMonth.startOf('month').format(format);
+          _endDate = nextMonth.endOf('month').format(format);
+        }
+
+        oMonth = new _SingleMonth2.default({
+          startDate: startEdgeDateOfEndDate,
+          endDate: endDate
+        });
+
+        monthData.push({
+          title: (0, _moment2.default)(startEdgeDateOfEndDate).format('YYYY-MM'),
+          dates: oMonth.getTotalDateCell()
+        });
+
+        if (oMonth.existToday) {
+          this.todayDate = {};
+          this.todayDate.date = oMonth.todayDate;
+          this.todayDate.monthIndex = monthData.length - 1;
+        }
+      }
+
+      return monthData;
+    }
+  }, {
+    key: 'getToday',
+    value: function getToday() {
+      return this.todayDate;
+    }
+  }]);
+
+  return CalendarCalculator;
+}();
+
+CalendarCalculator.defaultOptions = {
+  startDate: '',
+  endDate: '',
+  format: 'YYYY-MM-DD'
+};
+;
+
+module.exports = CalendarCalculator;
+
+/***/ })
+/******/ ]);
+});
