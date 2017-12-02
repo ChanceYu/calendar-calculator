@@ -31,7 +31,14 @@ let config = {
       }
     ]
   },
-  plugins: [ ],
+  plugins: [
+    new webpack.BannerPlugin(
+`${packageJSON.name}.js
+Version: ${packageJSON.version}
+Address: (https://github.com/ChanceYu/calendar-calculator)
+Author: ChanceYu
+Licensed under the MIT license`)
+  ],
   resolve: {
     extensions: ['.js']
   }
@@ -42,22 +49,6 @@ if(env === 'production'){
     'moment': 'moment'
   });
 }else if(env === 'development'){
-  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
-    compress: {
-      warnings: false
-    },
-    output: {
-      comments: false,
-      preamble: 
-`/**
-* ${packageJSON.name}.js
-* Version: ${packageJSON.version}
-* Address: (https://github.com/ChanceYu/calendar-calculator)
-* Author: ChanceYu
-* Licensed under the MIT license
-*/`
-    }
-  }));
   config.output.filename = 'calendar-calculator.all.js';
   config.devtool = 'source-map';
 }

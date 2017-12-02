@@ -1,3 +1,10 @@
+/*!
+ * calendar-calculator.js
+ * Version: 1.0.7
+ * Address: (https://github.com/ChanceYu/calendar-calculator)
+ * Author: ChanceYu
+ * Licensed under the MIT license
+ */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("moment"));
@@ -199,7 +206,13 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 "use strict";
 
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     * calendar-calculator.js
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     * Address: (https://github.com/ChanceYu/calendar-calculator)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     * Author: ChanceYu
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     * Licensed under the MIT license
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     */
+
 
 var _moment = __webpack_require__(2);
 

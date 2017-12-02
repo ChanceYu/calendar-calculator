@@ -1,3 +1,9 @@
+/**
+* calendar-calculator.js
+* Address: (https://github.com/ChanceYu/calendar-calculator)
+* Author: ChanceYu
+* Licensed under the MIT license
+*/
 import moment from 'moment';
 import assign from 'object-assign';
 import { toDouble } from './tool';
