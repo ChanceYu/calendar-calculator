@@ -1,6 +1,6 @@
 # month-calculator
 [![Build Status](https://travis-ci.org/ChanceYu/month-calculator.svg?branch=master)](https://travis-ci.org/ChanceYu/month-calculator)
-[![](https://img.shields.io/badge/language-JavaScript-brightgreen.svg)](https://travis-ci.org/ChanceYu/month-calculator)
+[![](https://img.shields.io/badge/language-JavaScript-brightgreen.svg)](https://github.com/ChanceYu/month-calculator)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php) 
 
 一个月份日期计算器插件，[English](./README.md)
