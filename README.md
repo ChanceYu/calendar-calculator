@@ -71,7 +71,7 @@ After use `getTotal` method will return the result structure below
 ```
 
 
-### date properties
+### Result date properties
 - `date` - total date formatted `YYYY-MM-DD`
 - `day` - date formatted `DD`
 - `weekday` - weekday from `0` to `6`
@@ -84,7 +84,7 @@ After use `getTotal` method will return the result structure below
 ## Examples
 
 - [react-calendar-picker](https://github.com/ChanceYu/react-calendar-picker)
-- [小程序 weapp.CalendarPicker](https://github.com/ChanceYu/weapp#weappcalendarpicker)
+- [weapp.CalendarPicker 小程序](https://github.com/ChanceYu/weapp#weappcalendarpicker)
 
 
 ## License
