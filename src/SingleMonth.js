@@ -86,11 +86,6 @@ class SingleMonth{
           disabled: true
         };
 
-        if(date === this.todayDate){
-          this.existToday = true;
-          item.isToday = true;
-        }
-
         cells.push(item);
 
         weekIndex++;
@@ -111,11 +106,6 @@ class SingleMonth{
           week: week,
           day: day,
           disabled: true
-        }
-        
-        if(date === this.todayDate){
-          this.existToday = true;
-          item.isToday = true;
         }
 
         cells.push(item);
@@ -164,11 +154,6 @@ class SingleMonth{
           day: day,
           disabled: true
         };
-        
-        if(date === this.todayDate){
-          this.existToday = true;
-          item.isToday = true;
-        }
 
         cells.push(item);
 
@@ -192,11 +177,6 @@ class SingleMonth{
           isNextMonth: true,
           disabled: true
         };
-        
-        if(date === this.todayDate){
-          this.existToday = true;
-          item.isToday = true;
-        }
 
         cells.push(item);
 
