@@ -1,6 +1,6 @@
 /**
-* calendar-calculator.js
-* Address: (https://github.com/ChanceYu/calendar-calculator)
+* month-calculator.js
+* Address: (https://github.com/ChanceYu/month-calculator)
 * Author: ChanceYu
 * Licensed under the MIT license
 */
@@ -9,14 +9,14 @@ import assign from 'object-assign';
 import { toDouble } from './tool';
 import SingleMonth from './SingleMonth';
 
-class CalendarCalculator {
+class MonthCalculator {
   static defaultOptions = {
     startDate: '',
     endDate: '',
     format: 'YYYY-MM-DD'
   }
   constructor(options) {
-    this.options = assign({}, CalendarCalculator.defaultOptions, options);
+    this.options = assign({}, MonthCalculator.defaultOptions, options);
   }
   isInvalidDate(){
     let startDate = this.options.startDate;
@@ -114,4 +114,4 @@ class CalendarCalculator {
   }
 };
 
-module.exports = CalendarCalculator;
+module.exports = MonthCalculator;

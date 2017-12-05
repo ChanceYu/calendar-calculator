@@ -1,1 +1,1 @@
-module.exports = require('./dist/calendar-calculator');
+module.exports = require('./lib/month-calculator');

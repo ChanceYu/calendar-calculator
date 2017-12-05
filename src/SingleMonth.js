@@ -1,6 +1,6 @@
 /**
-* calendar-calculator.js
-* Address: (https://github.com/ChanceYu/calendar-calculator)
+* month-calculator.js
+* Address: (https://github.com/ChanceYu/month-calculator)
 * Author: ChanceYu
 * Licensed under the MIT license
 */

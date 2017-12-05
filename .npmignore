@@ -1,0 +1,6 @@
+example
+src
+test
+node_modules
+*.js.map
+month-calculator.all.js

@@ -1,7 +1,7 @@
 {
-  "name": "calendar-calculator",
-  "version": "1.0.7",
-  "description": "a plugin for calendar calculator",
+  "name": "month-calculator",
+  "version": "1.0.8",
+  "description": "A plugin for month calculator, get months date from start date to end date",
   "main": "index.js",
   "scripts": {
     "build": "npm run build-pro && npm run build-dev",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ChanceYu/calendar-calculator.git"
+    "url": "git://github.com/ChanceYu/month-calculator.git"
   },
   "keywords": [
     "moment",
@@ -43,7 +43,11 @@
     "webpack-umd-external": "^1.0.2"
   },
   "bugs": {
-    "url": "https://github.com/ChanceYu/calendar-calculator/issues"
+    "url": "https://github.com/ChanceYu/month-calculator/issues"
   },
-  "homepage": "https://github.com/ChanceYu/calendar-calculator#readme"
+  "homepage": "https://github.com/ChanceYu/month-calculator#readme",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  }
 }

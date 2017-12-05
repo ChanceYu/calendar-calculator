@@ -13,9 +13,9 @@ const year = new Date().getFullYear();
 let config = {
   entry: path.join(__dirname, 'src/index.js'),
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'calendar-calculator.js',
-    library: 'CalendarCalculator',
+    path: path.join(__dirname, 'lib'),
+    filename: 'month-calculator.js',
+    library: 'MonthCalculator',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
@@ -35,7 +35,7 @@ let config = {
     new webpack.BannerPlugin(
 `${packageJSON.name}.js
 Version: ${packageJSON.version}
-Address: (https://github.com/ChanceYu/calendar-calculator)
+Address: (https://github.com/ChanceYu/month-calculator)
 Author: ChanceYu
 Licensed under the MIT license`)
   ],
@@ -49,7 +49,7 @@ if(env === 'production'){
     'moment': 'moment'
   });
 }else if(env === 'development'){
-  config.output.filename = 'calendar-calculator.all.js';
+  config.output.filename = 'month-calculator.all.js';
   config.devtool = 'source-map';
 }
 

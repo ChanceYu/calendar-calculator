@@ -1,6 +1,6 @@
-# calendar-calculator
-[![Build Status](https://travis-ci.org/ChanceYu/calendar-calculator.svg?branch=master)](https://travis-ci.org/ChanceYu/calendar-calculator)
-[![](https://img.shields.io/badge/language-JavaScript-brightgreen.svg)](https://travis-ci.org/ChanceYu/calendar-calculator)
+# month-calculator
+[![Build Status](https://travis-ci.org/ChanceYu/month-calculator.svg?branch=master)](https://travis-ci.org/ChanceYu/month-calculator)
+[![](https://img.shields.io/badge/language-JavaScript-brightgreen.svg)](https://travis-ci.org/ChanceYu/month-calculator)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php) 
 
 A plugin for calendar calculator , [中文](./README-zh.md)
@@ -9,7 +9,7 @@ A plugin for calendar calculator , [中文](./README-zh.md)
 ## Install
 
 ```bash
-npm install calendar-calculator
+npm install month-calculator
 ```
 
 
@@ -23,12 +23,12 @@ npm install calendar-calculator
 ## Usage
 
 ```javascript
-var oCalendar = new CalendarCalculator({
+var oMonth = new MonthCalculator({
     startDate: '2017-07-17',
     endDate: '2018-08-18'
 });
 
-var months = oCalendar.getTotal();
+var months = oMonth.getTotal();
 
 console.log(months);
 ```
