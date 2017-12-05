@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/language-JavaScript-brightgreen.svg)](https://travis-ci.org/ChanceYu/month-calculator)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php) 
 
-A plugin for calendar calculator , [中文](./README-zh.md)
+A plugin for month date calculator , [中文](./README-zh.md)
 
 
 ## Install
