@@ -43,6 +43,7 @@ console.log(months);
 ## 方法
 
 - `getTotal` - 获取开始日期到结束日期之间的所有月份
+- `getToday` - 如果今天的日期在开始日期和结束日期之间, 将会返回一个对象 `{ monthIndex, date }`, 其中值 `monthIndex` 就是今天的月份对应的索引（所有月份中的第几个月），否则返回`undefined`
 
 
 ## 结果

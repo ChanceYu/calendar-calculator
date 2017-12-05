@@ -43,6 +43,7 @@ console.log(months);
 ## Method
 
 - `getTotal` - get the total months from `startDate` to `endDate`
+- `getToday` - if today's date is between `startDate` and `endDate`, will return an Object `{ monthIndex, date }`, and the `monthIndex` is today's month index in total result, otherwise will return `undefined`
 
 
 ## Result
