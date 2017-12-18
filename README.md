@@ -1,7 +1,10 @@
 # month-calculator
-[![Build Status](https://travis-ci.org/ChanceYu/month-calculator.svg?branch=master)](https://travis-ci.org/ChanceYu/month-calculator)
-[![](https://img.shields.io/badge/language-JavaScript-brightgreen.svg)](https://github.com/ChanceYu/month-calculator)
-[![](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php) 
+[![NPM][img-npm]][url-npm]
+
+[![Build Status][img-travis]][url-travis]
+[![Dependencies][img-david]][url-david]
+[![Language][img-javascript]][url-github]
+[![License][img-mit]][url-mit]
 
 A plugin for month date calculator , [中文](./README-zh.md)
 
@@ -9,7 +12,7 @@ A plugin for month date calculator , [中文](./README-zh.md)
 ## Install
 
 ```bash
-npm install month-calculator
+npm install month-calculator --save
 ```
 
 
@@ -89,4 +92,17 @@ After use `getTotal` method will return the result structure below
 
 ## License
 
-[![](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php) 
+[![license][img-mit]][url-mit]
+
+
+[url-github]: https://github.com/ChanceYu/month-calculator
+[url-npm]: https://www.npmjs.com/package/month-calculator
+[url-travis]: https://travis-ci.org/ChanceYu/month-calculator
+[url-david]: https://david-dm.org/ChanceYu/month-calculator
+[url-mit]: https://opensource.org/licenses/mit-license.php
+
+[img-npm]: https://nodei.co/npm/month-calculator.png?compact=true
+[img-travis]: https://travis-ci.org/ChanceYu/month-calculator.svg?branch=master
+[img-david]: https://david-dm.org/ChanceYu/month-calculator/status.svg
+[img-javascript]: https://img.shields.io/badge/language-JavaScript-brightgreen.svg
+[img-mit]: https://img.shields.io/badge/license-MIT-blue.svg
