@@ -2,7 +2,6 @@
 [![NPM][img-npm]][url-npm]
 
 [![Build Status][img-travis]][url-travis]
-[![Dependencies][img-david]][url-david]
 [![Language][img-javascript]][url-github]
 [![License][img-mit]][url-mit]
 
