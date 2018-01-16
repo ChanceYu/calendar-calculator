@@ -86,7 +86,7 @@ console.log(months);
 ## 案例
 
 - [react-calendar-picker](https://github.com/ChanceYu/react-calendar-picker)
-- [weapp.CalendarPicker 小程序](https://github.com/ChanceYu/weapp#weappcalendarpicker)
+- [weapp-calendar-picker 微信小程序组件](https://github.com/ChanceYu/weapp#weapp-calendar-picker)
 
 
 ## 协议
