@@ -59,6 +59,8 @@ console.log(months);
         dates: [
             {
                 date: '2017-06-25',
+                year: '2017',
+                month: '06',
                 day: '25',
                 disabled: true,
                 isPrevMonth: true,
@@ -75,6 +77,8 @@ console.log(months);
 
 ### 每条数据的属性（也就是每一天的数据）
 - `date` - 当天完整的日期 ，格式 `YYYY-MM-DD`
+- `year` - 当天的年份 ，格式 `YYYY`
+- `month` - 当天的月份 ，格式 `MM`
 - `day` - 当天的日期 ，格式 `DD`
 - `weekday` - 数字从 `0` 到 `6` 的每周值
 - `week` - 中文的每周值，`日一二三四五六`

@@ -81,6 +81,8 @@ class SingleMonth{
           date: date,
           weekday: weekIndex,
           week: week,
+          year: this.YYYY,
+          month: this.prevMM,
           day: day,
           isPrevMonth: true,
           disabled: true
@@ -104,6 +106,8 @@ class SingleMonth{
           date: date,
           weekday: weekIndex,
           week: week,
+          year: this.YYYY,
+          month: this.MM,
           day: day,
           disabled: true
         }
@@ -125,6 +129,8 @@ class SingleMonth{
         date: date,
         weekday: weekIndex,
         week: week,
+        year: this.YYYY,
+        month: this.MM,
         day: day,
         enabled: true
       };
@@ -151,6 +157,8 @@ class SingleMonth{
           date: date,
           weekday: weekIndex,
           week: week,
+          year: this.YYYY,
+          month: this.MM,
           day: day,
           disabled: true
         };
@@ -173,6 +181,8 @@ class SingleMonth{
           date: date,
           weekday: weekIndex,
           week: week,
+          year: this.YYYY,
+          month: this.nextMM,
           day: day,
           isNextMonth: true,
           disabled: true

@@ -59,6 +59,8 @@ After use `getTotal` method will return the result structure below
         dates: [
             {
                 date: '2017-06-25',
+                year: '2017',
+                month: '06',
                 day: '25',
                 disabled: true,
                 isPrevMonth: true,
@@ -75,6 +77,8 @@ After use `getTotal` method will return the result structure below
 
 ### Result date properties
 - `date` - total date formatted `YYYY-MM-DD`
+- `year` - date formatted `YYYY`
+- `month` - date formatted `MM`
 - `day` - date formatted `DD`
 - `weekday` - weekday from `0` to `6`
 - `week` - Chinese weekday `日一二三四五六`
