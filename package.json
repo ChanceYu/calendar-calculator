@@ -1,6 +1,6 @@
 {
   "name": "month-calculator",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A plugin for month calculator, get months date from start date to end date",
   "main": "index.js",
   "scripts": {
@@ -23,8 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "object-assign": "^4.1.1",
-    "moment": "^2.15.0",
-    "webpack": "^2.7.0"
+    "moment": "^2.15.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

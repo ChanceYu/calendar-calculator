@@ -5,19 +5,79 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        table{
+            width: 98%;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+        }
+        .week td{
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        td{
+            text-align: center;
+            padding: 10px 0;
+        }
+        td.disabled{
+            color: #ccc;
+        }
+    </style>
 </head>
 <body>
+    <div id="box">
+
+    </div>
     <script src="../lib/month-calculator.all.js"></script>
     <script>
-        var oMonth = new MonthCalculator({
-            startDate: '2017-07-17',
-            endDate: '2018-08-18'
-        });
+        (function(){
+            var oMonth = new MonthCalculator({
+                startDate: '2017-07-17',
+                endDate: '2018-08-18'
+            });
 
-        var months = oMonth.getTotal();
+            var months = oMonth.getTotal();
 
-        console.log(months);
-        console.log(oMonth.getToday());
+            console.table(months);
+            console.log(oMonth.getToday());
+
+            var box = document.getElementById('box');
+            var html = '';
+
+            var i = 0;
+            var monthLen = months.length;
+            for(; i < monthLen; i++){
+                var dates = months[i].dates;
+                var j = 0;
+                var dateLen = dates.length;
+                
+                html += '<table>';
+                html += '<thead><tr><td colspan="7">'+ months[i].title +'</td></tr><tr class="week"><td>Sun</td><td>Mon</td><td>Tue</td><td>Wed</td><td>Thu</td><td>Fri</td><td>Sat</td></tr></thead>';
+
+                html += '<tbody>';
+                for(; j < dateLen; j++){
+                    var item = dates[j];
+
+                    if(j % 7 == 0){
+                        html += '<tr>';
+                    }
+
+                    html += '<td class="'+ (item.disabled ? 'disabled' : '') +'">'+ item.day +'</td>';
+
+                    if(j % 7 == 6){
+                        html += '</tr>';
+                    }
+                }
+                html += '</tbody>';
+                html += '</table>';
+            }
+
+            box.innerHTML = html;
+        }());
     </script>
 </body>
 </html>
