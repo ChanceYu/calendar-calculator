@@ -1,6 +1,6 @@
 {
   "name": "month-calculator",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A plugin for month calculator, get months date from start date to end date",
   "main": "index.js",
   "scripts": {
